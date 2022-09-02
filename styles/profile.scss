@@ -22,7 +22,7 @@
 					width: 22px;
 					height: 22px;
 
-					path{
+					path {
 						fill: #7a7e81;
 					}
 				}
@@ -39,7 +39,7 @@
 					width: 22px;
 					height: 22px;
 
-					path{
+					path {
 						fill: #7a7e81;
 					}
 				}
@@ -98,22 +98,22 @@
 		}
 	}
 
-	.tech-icons{
-		.devicons{
+	.tech-icons {
+		.devicons {
 			line-height: 48px;
 			height: 48px;
 			margin-right: 1rem;
 			color: #7a7e81;
 			transition: 0.25s color ease-in;
 
-			&::before{
+			&::before {
 				font-size: 48px;
 			}
 		}
 
-		li{
-			&:hover{
-				.devicons{
+		li {
+			&:hover {
+				.devicons {
 					color: #343a40;
 				}
 			}
@@ -151,6 +151,20 @@
 }
 
 
+.noselect {
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
 
 
 
@@ -167,7 +181,7 @@
 		}
 	}
 
-	.with-sidebar{
+	.with-sidebar {
 		padding-left: 17rem;
 	}
 

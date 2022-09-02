@@ -28,7 +28,7 @@ export default function Profile(props: Props) {
       </Head>
       <SideNav />
       <div className="container-fluid p-0">
-        <main className="profile with-sidebar">
+        <main className="profile noselect with-sidebar">
           <About />
           <Experiences />
           <TechSkills />
