@@ -24,7 +24,9 @@ export default function Index({ posts, author }: Props) {
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
         </Head>
         <Container>
-          <BlogList posts={posts} />
+          <div className="blog-list-wrapper">
+            <BlogList posts={posts} />
+          </div>
         </Container>
       </Layout>
     </>

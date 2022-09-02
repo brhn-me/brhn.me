@@ -16,7 +16,7 @@ type Props = {
 }
 
 
-const BlogInfo = ({
+export const BlogInfo = ({
   source,
   date,
   author
@@ -36,7 +36,7 @@ const BlogInfo = ({
   )
 }
 
-const Tags = ({
+export const Tags = ({
   tags
 }) => {
   if (!tags) {
@@ -55,7 +55,7 @@ const Tags = ({
 }
 
 
-const BlogLink = (props) => {
+export const BlogLink = (props) => {
 
   return props.source == "md" ? (
     <Link href={props.link}>{props.children}</Link>) :
@@ -80,7 +80,7 @@ const BlogItem = ({
       <div className="col-lg-4">
         <BlogLink link={slug} source={source}>
           <div className="image-container">
-            <img className="blog-item-image img-fluid rounded float-end d-block" src={coverImage} />
+            <img className="blog-item-image img-fluid rounded d-block" src={coverImage} />
           </div>
         </BlogLink>
       </div>

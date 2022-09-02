@@ -1,15 +1,16 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from '../../components/container'
-import PostBody from '../../components/post-body'
+import BlogBody from '../../components/blog-body'
 import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
+import { BlogInfo, Tags } from '../../components/blog-item'
+import { SITE_NAME } from '../../lib/constants'
+import Sharer from '../../components/sharer'
 
 type Props = {
   post: PostType
@@ -19,32 +20,42 @@ type Props = {
 
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter()
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
   return (
     <Layout preview={preview}>
       <Container>
         <Header />
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <h2>Loading…</h2>
         ) : (
           <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
+            <div className="row">
+              <div className="col">
+                <article className="blog mt-5">
+                  <Head>
+                    <title>
+                      {post.title} :: {SITE_NAME}
+                    </title>
+                    {/* <meta property="og:image" content={post.ogImage.url} /> */}
+                  </Head>
+                  <div className="image-container">
+                    <img className="blog-image img-fluid rounded d-block" src={post.coverImage} />
+                  </div>
+                  <h2 className="blog-title mt-5">{post.title}</h2>
+                  <BlogInfo date={post.date} source="md" author={post.author} />
+                  <BlogBody content={post.content} />
+                  <div className="blog-footer">
+                    <Tags tags={post.tags} />
+                    <Sharer />
+                  </div>
+                </article>
+              </div>
+            </div>
+
           </>
         )}
       </Container>
@@ -67,6 +78,7 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
+    'tags'
   ])
   const content = await markdownToHtml(post.content || '')
 
