@@ -4,9 +4,10 @@ import { getAllPosts, getMediumPosts } from '../lib/api'
 import Head from 'next/head'
 import Post from '../interfaces/post'
 import { SITE_NAME } from '../lib/constants'
-import MoreStories from '../components/more-stories'
 import PostType from '../interfaces/post'
 import moment from 'moment'
+import BlogList from '../components/blog-list'
+import striptags from 'striptags';
 
 type Props = {
   posts: Post[],
@@ -23,8 +24,7 @@ export default function Index({ posts, author }: Props) {
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
         </Head>
         <Container>
-          <h1>Author: {author}</h1>
-          <MoreStories posts={posts} />
+          <BlogList posts={posts} />
         </Container>
       </Layout>
     </>
@@ -48,13 +48,10 @@ export const getStaticProps = async () => {
   let posts = [];
 
   staticPosts.forEach((sp) => {
+    sp.source = "md";
+    sp.slug = "/posts/"+sp.slug;
     posts.push(sp);
   })
-
-  console.log("***********");
-  console.log(staticPosts.length);
-  console.log("***********");
-  console.log(posts.length);
 
   if (medium.status == "ok" && medium.items != null && medium.items.length > 0) {
 
@@ -62,21 +59,28 @@ export const getStaticProps = async () => {
     // now add medium posts
     medium.items.forEach((item) => {
       const date = moment(Date.parse(item.pubDate)).toISOString();
+      let excerpt =  striptags(item.description);
+      let words = excerpt.split(' ');
+      if(words.length > 150){
+        excerpt = words.slice(0, 150).join(' ') + "...";
+      }
 
       let post: PostType = {
         title: item.title,
         date: date,
-        slug: "",
-        coverImage: "",
+        slug: item.guid,
+        coverImage: item.thumbnail,
         author: {
           name: item.author,
           picture: ''
         },
-        excerpt: '',
+        excerpt: excerpt,
         ogImage: {
           url: ''
         },
-        content: ''
+        content: '',
+        tags: item.categories,
+        source: 'medium'
       }
       posts.push(post);
     });
