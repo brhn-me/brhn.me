@@ -8,6 +8,9 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
+tags:
+    - Gutibazi
+    - Faporbazi
 ---
 
 Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla Noakhailla

@@ -4,9 +4,9 @@ type Props = {
   content: string
 }
 
-const PostBody = ({ content }: Props) => {
+const BlogBody = ({ content }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="blog-body mb-5">
       <div
         className={markdownStyles['markdown']}
         dangerouslySetInnerHTML={{ __html: content }}
@@ -15,4 +15,4 @@ const PostBody = ({ content }: Props) => {
   )
 }
 
-export default PostBody
+export default BlogBody
