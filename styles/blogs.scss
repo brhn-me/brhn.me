@@ -4,6 +4,20 @@
 }
 .blog{
 	margin-bottom: 10rem;
+
+	.blog-body{
+		p{
+			img{
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	img{
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 .blog-list{

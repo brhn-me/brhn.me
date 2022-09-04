@@ -23,7 +23,7 @@ export interface Item {
     categories: string[];
 }
 
-export interface Medium {
+export interface RSS {
     status: string;
     feed: Feed;
     items: Item[];
