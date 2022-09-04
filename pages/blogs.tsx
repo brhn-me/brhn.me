@@ -46,7 +46,7 @@ export const getStaticProps = async () => {
     'excerpt',
   ])
 
-  const medium = await getMediumPosts();
+  const mediumData = await getMediumPosts();
   let posts = [];
 
   staticPosts.forEach((sp) => {
@@ -55,11 +55,12 @@ export const getStaticProps = async () => {
     posts.push(sp);
   })
 
-  if (medium.status == "ok" && medium.items != null && medium.items.length > 0) {
+  if (mediumData.items && mediumData.items.length > 0) {
+
 
 
     // now add medium posts
-    medium.items.forEach((item) => {
+    mediumData.items.forEach((item) => {
       const date = moment(Date.parse(item.pubDate)).toISOString();
       let excerpt =  striptags(item.description);
       let words = excerpt.split(' ');

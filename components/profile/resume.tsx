@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Project from "../../interfaces/project";
 import Moment from "react-moment";
+import Link from "next/link";
 
 export function ResumeSection(props) {
   return <section className="resume-section p-3 p-lg-5 d-flex d-column flex-column" id={props.id}>
@@ -36,11 +37,11 @@ export function KeyPoint(props) {
 
 
 export function Skills(props) {
-  return <ul className="skills">{props.children}</ul>;
+  return <ul className="tags skills">{props.children}</ul>;
 }
 
 export function Skill(props) {
-  return <li className="skill btn btn-sm btn-outline-secondary">{props.children}</li>
+  return <li className="tag skill">{props.children}</li>
 }
 
 export function Employment(props) {
@@ -99,6 +100,16 @@ export function Position(props) {
 export function Contributions(props) {
   return (
     <ul className="contributions mb-3">{props.children}</ul>
+  )
+}
+
+export function ExperienceLetterButton(props) {
+  return (
+    <div className="pt-3 pb-3">
+      <Link href={props.url}>
+        <a className="btn btn-sm btn-outline-success">Experience Letter</a>
+      </Link>
+    </div>
   )
 }
 

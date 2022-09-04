@@ -1,5 +1,5 @@
 import React from "react";
-import { Contribution, Contributions, Employee, Employment, Position, Positions, ResumeHeading, ResumeSection, Skill, Skills } from "./resume";
+import { Contribution, Contributions, Employee, Employment, ExperienceLetterButton, Position, Positions, ResumeHeading, ResumeSection, Skill, Skills } from "./resume";
 
 export default function Experiences() {
 
@@ -47,6 +47,7 @@ export default function Experiences() {
             Developed the full stack admin portal for automation of sales team using spring boot and react.
           </Contribution>
         </Contributions>
+        <ExperienceLetterButton url="/experience-letters/goava" />
       </Employment>
 
       <Employment>
@@ -95,6 +96,7 @@ export default function Experiences() {
             Added proper permission check and validation in business logic using template pattern.
           </Contribution>
         </Contributions>
+        <ExperienceLetterButton url="/experience-letters/nilavo" />
       </Employment>
 
     </ResumeSection>

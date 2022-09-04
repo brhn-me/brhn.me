@@ -32,7 +32,7 @@ export default function Post({ post, morePosts, preview }: Props) {
         {router.isFallback ? (
           <h2>Loading…</h2>
         ) : (
-          <>
+          <main>
             <div className="row">
               <div className="col">
                 <article className="blog mt-5">
@@ -56,7 +56,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               </div>
             </div>
 
-          </>
+          </main>
         )}
       </Container>
     </Layout>

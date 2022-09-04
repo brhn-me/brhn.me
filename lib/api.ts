@@ -1,9 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import { Medium } from '../interfaces/medium'
-import PostType from '../interfaces/post'
-import moment from 'moment'
+import { RSS } from '../interfaces/rss'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -19,8 +17,11 @@ function fetchMedium<T>(resourceUrl: string): Promise<T> {
 }
 
 export async function getMediumPosts() {
-  const medium: Medium = await fetchMedium<Medium>('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@brhnme')
-  return medium;
+  const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@brhnme?abd=2342342s34dsfdsf';
+  const data: RSS = await fetchMedium<RSS>(url);
+  console.log(data);
+  fs.writeFileSync('data/medium.json', JSON.stringify(data));
+  return data;
 }
 
 
