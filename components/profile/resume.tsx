@@ -36,11 +36,11 @@ export function KeyPoint(props) {
 
 
 export function Skills(props) {
-  return <ul className="skills">{props.children}</ul>;
+  return <ul className="tags skills">{props.children}</ul>;
 }
 
 export function Skill(props) {
-  return <li className="skill btn btn-sm btn-outline-secondary">{props.children}</li>
+  return <li className="tag skill">{props.children}</li>
 }
 
 export function Employment(props) {
