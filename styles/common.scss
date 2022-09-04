@@ -1,14 +1,33 @@
-.pdf-container{
-    display: flex;
-    justify-content: center;
+.pdf{
 
-    .pdf-viewport{
-		min-width: 888px;
-		min-height: 1145px;
-        width: 48vw;
-        height: 62vw;
-    }
+	.pdf-container{
+		display: flex;
+		justify-content: center;
+	
+		.pdf-viewport{
+			width: 100%;
+			min-height: 750px;
+
+			@media (min-width: 768px) {
+				min-height: 975px;
+			}
+
+			@media (min-width: 992px) {
+				min-height: 1372px;
+			}
+
+			@media (min-width: 1200px) {
+				min-height: 1562px;
+			}
+
+			@media (min-width: 1400px) {
+				min-height: 1814px;
+			}
+		}
+	}
 }
+
+
 
 .tags {
 	list-style: none;
