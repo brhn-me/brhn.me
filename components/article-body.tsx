@@ -4,9 +4,9 @@ type Props = {
   content: string
 }
 
-const BlogBody = ({ content }: Props) => {
+const ArticleBody = ({ content }: Props) => {
   return (
-    <div className="blog-body mb-5">
+    <div className="article-body mb-5">
       <div
         className={markdownStyles['markdown']}
         dangerouslySetInnerHTML={{ __html: content }}
@@ -15,4 +15,4 @@ const BlogBody = ({ content }: Props) => {
   )
 }
 
-export default BlogBody
+export default ArticleBody

@@ -19,7 +19,6 @@ function fetchMedium<T>(resourceUrl: string): Promise<T> {
 export async function getMediumPosts() {
   const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@brhnme?abd=2342342s34dsfdsf';
   const data: RSS = await fetchMedium<RSS>(url);
-  console.log(data);
   fs.writeFileSync('data/medium.json', JSON.stringify(data));
   return data;
 }

@@ -10,7 +10,7 @@ type ProjectType = {
     url: string
   },
   repo: string,
-  blog: string,
+  article: string,
   techs: [string]
   content: string
 }

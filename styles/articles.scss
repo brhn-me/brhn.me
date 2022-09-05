@@ -1,11 +1,11 @@
-.blog-list-wrapper{
+.article-list-wrapper{
 	margin-top: 64px;
 	padding-top: 1rem;
 }
-.blog{
+.article{
 	margin-bottom: 10rem;
 
-	.blog-body{
+	.article-body{
 		p{
 			img{
 				display: block;
@@ -20,26 +20,26 @@
 	}
 }
 
-.blog-list{
+.article-list{
 	
-	.blog-item{
+	.article-item{
 		border-bottom: 1px solid #dee2e6;
 
 		&:last-child{
 			border-bottom: none;
 		}
 
-		.blog-item-content{
+		.article-item-content{
 			display: flex;
 			flex-direction: column;
   			justify-content: space-between;
 		}
 
-		.blog-item-title{
+		.article-item-title{
 			margin-top: 1.5rem;
 		}
 
-		.blog-item-image{
+		.article-item-image{
 			cursor: pointer;
 		}
 
@@ -50,9 +50,9 @@
 }
 
 @media (min-width: 992px) {
-	.blog-list{
-		.blog-item{
-			.blog-item-title{
+	.article-list{
+		.article-item{
+			.article-item-title{
 				margin-top: 0rem;
 			}
 		}

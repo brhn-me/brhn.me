@@ -1,18 +1,17 @@
 import type Author from './author'
 
-type PostType = {
+type Article = {
+  id: string
   slug: string
   title: string
+  link: string
   date: string
-  coverImage: string
+  thumb: string
   author: Author
   excerpt: string
-  ogImage: {
-    url: string
-  }
-  content: string,
-  tags: string[],
+  content: string
+  tags: string[]
   source: string
 }
 
-export default PostType
+export default Article

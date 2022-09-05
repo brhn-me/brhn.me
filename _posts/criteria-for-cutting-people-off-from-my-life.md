@@ -3,13 +3,12 @@ title: 'Criteria for cutting people off from my life'
 excerpt: 'I have decided to cut off a few people from my life. I could have thought of many but eventually ended up with these three critical criteria.
 
 1.  Judgmental: You judge other people’s choices. You don’t know any details of other people’s life but always find a way to decide if he/she is a success or failure based on your terms. You don’t stop here; you let the other person know how you think of them with your judgmental remarks.  '
-coverImage: '/assets/blog/criteria-for-cutting-people-off-from-my-life/unfriend.jpg'
+thumb: '/assets/articles/criteria-for-cutting-people-off-from-my-life/unfriend.jpg'
 date: '2020-07-01T17:12:07.322Z'
 author:
   name: Burhan Uddin
-  picture: '/assets/blog/authors/burhan.jpg'
-ogImage:
-  url: '/assets/blog/criteria-for-cutting-people-off-from-my-life/unfriend.jpg'
+  picture: '/assets/articles/authors/burhan.jpg'
+source: 'md'
 tags:
   - Thoughts
 ---

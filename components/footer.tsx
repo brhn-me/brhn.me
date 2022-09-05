@@ -24,7 +24,7 @@ const Footer = (props) => {
             <ul className="list-unstyled">
               <li className="mb-2"><Link href="/">Home</Link></li>
               <li className="mb-2"><Link href="/resume">Resume</Link></li>
-              <li className="mb-2"><Link href="/blogs">Blogs</Link></li>
+              <li className="mb-2"><Link href="/posts">Posts</Link></li>
               <li className="mb-2"><Link href="/travel">Travel</Link></li>
               <li className="mb-2"><Link href="/activities">Activities</Link></li>
               <li className="mb-2"><Link href="/contact">Contact</Link></li>

@@ -1,17 +1,13 @@
 import React from "react";
 import { getAllPosts } from '../lib/api'
-import Post from '../interfaces/post'
 import Project from "../interfaces/project";
 import { getAllProjects } from "../lib/projects.api";
 import Profile from "../components/profile";
-
-
-
-
+import Article from "../interfaces/article";
 
 
 type Props = {
-  posts: Post[],
+  posts: Article[],
   projects: Project[]
 }
 
@@ -39,7 +35,7 @@ export const getStaticProps = async () => {
     'coverImage',
     'excerpt',
     'repo',
-    'blog',
+    'articles',
     'techs',
   ])
 

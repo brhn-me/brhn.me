@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import Article from '../interfaces/article'
 import type Author from '../interfaces/author'
 import DateFormatter from './date-formatter'
-import { fi } from 'date-fns/locale'
 
 type Props = {
   title: string
@@ -16,13 +15,13 @@ type Props = {
 }
 
 
-export const BlogInfo = ({
+export const ArticleInfo = ({
   source,
   date,
   author
 }) => {
   return (
-    <div className="blog-info mb-3">
+    <div className="article-info mb-3">
       <small className="text-muted">Posted: <DateFormatter dateString={date} />
         {
           source == "medium" && (
@@ -55,51 +54,44 @@ export const Tags = ({
 }
 
 
-export const BlogLink = (props) => {
+export const ArticleLink = (props) => {
 
   return props.source == "md" ? (
-    <Link href={props.link}>{props.children}</Link>) :
+    <Link href={'/posts/'+props.link}>{props.children}</Link>) :
     (<a target="_blank" href={props.link}>{props.children}</a>)
 }
 
-const BlogItem = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-  source,
-  tags
-}: Props) => {
+type ArticleItemProps = {
+  post: Article
+}
 
-
-
+const ArticleItem = (props: ArticleItemProps) => {
+  let {post} = props;
   return (
-    <div className="blog-item row pb-5 mb-5">
+    <div className="article-item row pb-5 mb-5">
       <div className="col-lg-4">
-        <BlogLink link={slug} source={source}>
+        <ArticleLink link={post.slug} source={post.source}>
           <div className="image-container">
-            <img className="blog-item-image img-fluid rounded d-block" src={coverImage} />
+            <img className="article-item-image img-fluid rounded d-block" src={post.thumb} />
           </div>
-        </BlogLink>
+        </ArticleLink>
       </div>
-      <div className="blog-item-content col-lg-8">
-        <div className="blog-item-details">
-          <h3 className="blog-item-title">
-            <BlogLink link={slug} source={source}>
-              {title}
-            </BlogLink>
+      <div className="article-item-content col-lg-8">
+        <div className="article-item-details">
+          <h3 className="article-item-title">
+            <ArticleLink link={post.slug} source={post.source}>
+              {post.title}
+            </ArticleLink>
           </h3>
-          <BlogInfo date={date} source={source} author={author} />
-          <p className="">{excerpt}</p>
+          <ArticleInfo date={post.date} source={post.source} author={post.author} />
+          <p className="">{post.excerpt}</p>
         </div>
-        <div className="blog-item-footer">
-          <Tags tags={tags} />
+        <div className="article-item-footer">
+          <Tags tags={post.tags} />
         </div>
       </div>
     </div>
   )
 }
 
-export default BlogItem
+export default ArticleItem
