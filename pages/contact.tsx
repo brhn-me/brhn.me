@@ -2,10 +2,19 @@ import Container from '../components/container'
 import Layout from '../components/layout'
 import Head from 'next/head'
 import { SITE_NAME } from '../lib/constants'
+import { useState, useEffect } from 'react';
 
 
 export default function Index(props) {
   const title = `Contact :: ${SITE_NAME}`;
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes('success=true')) {
+      setSuccess(true);
+    }
+  }, []);
+
   return (
     <>
       <Layout>
@@ -18,7 +27,12 @@ export default function Index(props) {
             <div className="col-lg-6">
               <div className="contact mb-5 p-3">
                 <h2>Contact</h2>
-                <form name="contact" data-netlify="true">
+                {
+                  success && (<div className="alert alert-success" role="alert">
+                    Your message has been recieved.
+                  </div>)
+                }
+                <form method="post" name="contact" data-netlify="true" action="/contact?success=true">
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
@@ -33,7 +47,7 @@ export default function Index(props) {
                     <textarea className="form-control" id="message" name="message" rows={3}></textarea>
                   </div>
                   <div className="mb-3">
-                    <button type="button" className="btn btn-outline-success">Send Message</button>
+                    <button type="submit" className="btn btn-outline-success">Send Message</button>
                   </div>
                 </form>
               </div>
