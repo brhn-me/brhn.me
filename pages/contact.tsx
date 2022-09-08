@@ -19,6 +19,7 @@ export default function Index(props) {
               <div className="contact mb-5 p-3">
                 <h2>Contact</h2>
                 <form name="contact" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" className="form-control" id="name" name="name" placeholder="John Doe" />
