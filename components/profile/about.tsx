@@ -1,6 +1,7 @@
 import React from "react";
 import SocialLinks from "./social-links";
 import { KeyPoint, KeyPoints, ResumeSection, ResumeSummary, ResumeTitle } from "./resume";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -16,6 +17,11 @@ export default function About() {
         <KeyPoint>Worked with AWS cloud technologies and developed highly scalable microservices and APIs.</KeyPoint>
         <KeyPoint>Profound understanding of algorithms, data structures, OOP, design patterns, and system design.</KeyPoint>
       </KeyPoints>
+      <div className="pt-3 pb-3">
+        <Link href="/resume">
+          <a className="btn btn-outline-success">View Resume</a>
+        </Link>
+      </div>
       <SocialLinks />
     </ResumeSection>
   )
