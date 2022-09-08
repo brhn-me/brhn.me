@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { SITE_NAME } from '../lib/constants'
 import ArticleList from '../components/article-list'
 import Article from '../interfaces/article'
-import { getAllPosts, getAllPostsMerged, getMediumPosts } from '../lib/data'
+import { getAllPosts } from '../lib/data'
 
 type Props = {
   posts: Article[],
@@ -34,8 +34,7 @@ export default function Index({ posts, author }: Props) {
 
 
 export const getStaticProps = async () => {
-  let posts = await getAllPostsMerged();
-
+  let posts = getAllPosts();
   return {
     props: { posts }
   }

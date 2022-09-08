@@ -3,12 +3,8 @@ title: 'Can Computers Think?'
 excerpt: 'The question that drives all artificial intelligence has been discussed, debated, and disputed for an eon. This article will discuss some famous experiments regarding computer intelligence. It will differentiate between human intelligence and artificial intelligence. It will also provide some explanation regarding what consciousness is and if it is attainable by machines.
 
 The intangible idea regarding whether a computer or a machine can think has always perplexed the greatest scientific minds\[4\]. Yet, we don’t have any clear answer. Deep learning neural networks have already exceeded human performance in terms of object recognition and pattern matching\[12\]. But intelligence is not all about pattern recognition. It is more about understanding and modeling the world around us, problem-solving, creating new understanding as we learn more about the world\[11\]. In this article, we’ll briefly explore the idea of whether computers have the ability to think and if they can think like a human.'
-thumb: '/assets/articles/can-computers-think/can-computers-think.jpg'
+image: '/assets/articles/can-computers-think/can-computers-think.jpg'
 date: '2021-06-17T12:17:52.322Z'
-author:
-  name: Burhan Uddin
-  picture: '/assets/articles/authors/burhan.jpg'
-source: 'md'
 tags:
   - Artificial Intelligence
   - Machine Learning

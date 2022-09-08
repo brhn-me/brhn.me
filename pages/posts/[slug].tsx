@@ -1,16 +1,17 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
+import Image from 'next/image'
 import Container from '../../components/container'
 import Header from '../../components/header'
 import Layout from '../../components/layout'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
-import { SITE_NAME } from '../../lib/constants'
+import { POSTS_DIR, SITE_NAME } from '../../lib/constants'
 import Sharer from '../../components/sharer'
 import Article from '../../interfaces/article'
 import { ArticleInfo, Tags } from '../../components/article-item'
 import ArticleBody from '../../components/article-body'
-import { getAllPosts, getPostBySlug, getPostSlugsReal } from '../../lib/data'
+import { getAllMDSlugs, getMDPostBySlug } from '../../scripts/data-generator.mjs'
 
 type Props = {
   post: Article
@@ -27,6 +28,7 @@ export default function Post({ post }: Props) {
 
   return (
     <Layout>
+      {post.title}
       <Container>
         <Header />
         {router.isFallback ? (
@@ -34,13 +36,16 @@ export default function Post({ post }: Props) {
         ) : (
           <main>
             <div className="row">
-              <div className="col">
-                <article className="article mt-5">
+              <div className="col d-flex justify-content-center">
+                <article className="article mt-3">
                   <Head>
                     <title>{title}</title>
                   </Head>
                   <div className="image-container">
-                    <img className="article-image img-fluid rounded d-block" src={post.thumb} />
+                    <Image src={post.image}
+                      width={692}
+                      height={390}
+                      layout='responsive' />
                   </div>
                   <h2 className="article-title mt-5">{post.title}</h2>
                   <ArticleInfo date={post.date} source="md" author={post.author} />
@@ -52,11 +57,11 @@ export default function Post({ post }: Props) {
                 </article>
               </div>
             </div>
-
           </main>
-        )}
-      </Container>
-    </Layout>
+        )
+        }
+      </Container >
+    </Layout >
   )
 }
 
@@ -67,8 +72,9 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug)
-  const content = await markdownToHtml(post.content || '')
+  const post = await getMDPostBySlug(params.slug, true)
+  let content = post['content'] || ''
+  content = await markdownToHtml(content)
 
   return {
     props: {
@@ -81,7 +87,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const slugs = getPostSlugsReal()
+  const slugs = await getAllMDSlugs()
 
   return {
     paths: slugs.map((slug) => {

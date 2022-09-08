@@ -3,27 +3,15 @@ import ErrorPage from 'next/error'
 import Container from '../../components/container'
 import Header from '../../components/header'
 import Layout from '../../components/layout'
-import Head from 'next/head'
-import markdownToHtml from '../../lib/markdownToHtml'
 import { SITE_NAME } from '../../lib/constants'
-import Sharer from '../../components/sharer'
 import Article from '../../interfaces/article'
-import { ArticleInfo, Tags } from '../../components/article-item'
-import ArticleBody from '../../components/article-body'
-import { getAllPosts, getAllPostsMerged, getPostBySlug, getPostSlugsReal } from '../../lib/data'
 import ArticleList from '../../components/article-list'
+import { getAllPostsTogether } from '../../scripts/data-generator.mjs'
+import { tagify, untagify } from '../../lib/tags'
 
 type Props = {
   tag: string,
   posts: Article[]
-}
-
-function tagify(tag): string {
-  return tag.toLowerCase().split(" ").join("-");
-}
-
-function untagify(tag): string {
-  return tag.split("-").join(" ");
 }
 
 export default function Post({ tag, posts }: Props) {
@@ -69,7 +57,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  let allPosts = await getAllPostsMerged()
+  let allPosts = await getAllPostsTogether()
 
   // only posts in this filter
   let posts: Article[] = [];
@@ -80,7 +68,23 @@ export async function getStaticProps({ params }: Params) {
       for (let j = 0; j < post.tags.length; j++) {
         let tag = tagify(post.tags[j]);
         if (tag == params.slug) {
-          posts.push(post);
+          posts.push({
+            id: post.id,
+            slug: post.slug,
+            title: post.title,
+            link: post.link,
+            date: post.date,
+            image: post.image,
+            author: {
+              name: post['author']['name'],
+              picture: post['author']['picture'],
+              
+            },
+            excerpt: post.excerpt,
+            content: post.content,
+            tags: post.tags,
+            source: post.source
+          });
         }
       }
     }
@@ -94,8 +98,9 @@ export async function getStaticProps({ params }: Params) {
   }
 }
 
+
 export async function getStaticPaths() {
-  const posts = await getAllPostsMerged()
+  const posts = await getAllPostsTogether()
 
   // find all unique tags
   let tags: Set<string> = new Set<string>();

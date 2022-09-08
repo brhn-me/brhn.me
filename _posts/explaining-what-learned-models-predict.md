@@ -2,12 +2,8 @@
 title: 'Explaining what learned models predict: In which cases can we trust machine learning models and when is caution required?'
 excerpt: 'In many cases, it is difficult to explain how machine learning models predict. Transparency becomes a big issue when it comes to applying models in several real-life areas. Here, we discuss how we can explain a model’s predictions and how people’s trust in the model depends on its explainability. We also try to understand where certain caution is required. AI-based products and services are increasingly prevalent for decision making in a wide range of domains. Machine learning models predict decisions based on patterns from data. When the complexity  
 and amount of data grows, it becomes harder to explain those predictions. Without proper explainability of the result, these models may lose trust and credibility, especially when using it in some high-stakes decision-making. In such cases, it is also important to be cautious. Cyber attacks to access confidential data or the unpredictable nature of models may result in unexpected outcomes.'
-thumb: '/assets/articles/explaining-what-learned-models-predict/xai.png'
+image: '/assets/articles/explaining-what-learned-models-predict/xai.png'
 date: '2022-05-21T05:15:52.322Z'
-author:
-  name: Burhan Uddin
-  picture: '/assets/articles/authors/burhan.jpg'
-source: 'md'
 tags:
   - Artificial Intelligence
   - Machine Learning

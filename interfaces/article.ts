@@ -6,7 +6,7 @@ type Article = {
   title: string
   link: string
   date: string
-  thumb: string
+  image: string
   author: Author
   excerpt: string
   content: string

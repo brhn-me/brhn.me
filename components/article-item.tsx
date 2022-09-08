@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Article from '../interfaces/article'
 import type Author from '../interfaces/author'
 import DateFormatter from './date-formatter'
+import { tagify } from '../lib/tags'
 
 type Props = {
   title: string
@@ -46,7 +48,7 @@ export const Tags = ({
     <ul className="tags">
       {
         tags.map(tag => (
-          <li className="tag" key={tag}>{tag}</li>
+          <li className="tag" key={tag}><Link href={"/tags/" + tagify(tag)}>{tag}</Link></li>
         ))
       }
     </ul>
@@ -54,11 +56,11 @@ export const Tags = ({
 }
 
 
-export const ArticleLink = (props) => {
+export const ArticleLink = ({ post, children }) => {
 
-  return props.source == "md" ? (
-    <Link href={'/posts/'+props.link}>{props.children}</Link>) :
-    (<a target="_blank" href={props.link}>{props.children}</a>)
+  return post.source == "md" ? (
+    <Link href={'/posts/' + post.slug}>{children}</Link>) :
+    (<a target="_blank" href={post.link}>{children}</a>)
 }
 
 type ArticleItemProps = {
@@ -66,20 +68,23 @@ type ArticleItemProps = {
 }
 
 const ArticleItem = (props: ArticleItemProps) => {
-  let {post} = props;
+  let { post } = props;
   return (
     <div className="article-item row pb-5 mb-5">
       <div className="col-lg-4">
-        <ArticleLink link={post.slug} source={post.source}>
+        <ArticleLink post={post} >
           <div className="image-container">
-            <img className="article-item-image img-fluid rounded d-block" src={post.thumb} />
+            <Image src={post.image}
+              width={980}
+              height={552}
+              layout='responsive' />
           </div>
         </ArticleLink>
       </div>
       <div className="article-item-content col-lg-8">
         <div className="article-item-details">
           <h3 className="article-item-title">
-            <ArticleLink link={post.slug} source={post.source}>
+            <ArticleLink post={post}>
               {post.title}
             </ArticleLink>
           </h3>
