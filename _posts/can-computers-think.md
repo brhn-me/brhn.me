@@ -3,13 +3,8 @@ title: 'Can Computers Think?'
 excerpt: 'The question that drives all artificial intelligence has been discussed, debated, and disputed for an eon. This article will discuss some famous experiments regarding computer intelligence. It will differentiate between human intelligence and artificial intelligence. It will also provide some explanation regarding what consciousness is and if it is attainable by machines.
 
 The intangible idea regarding whether a computer or a machine can think has always perplexed the greatest scientific minds\[4\]. Yet, we don’t have any clear answer. Deep learning neural networks have already exceeded human performance in terms of object recognition and pattern matching\[12\]. But intelligence is not all about pattern recognition. It is more about understanding and modeling the world around us, problem-solving, creating new understanding as we learn more about the world\[11\]. In this article, we’ll briefly explore the idea of whether computers have the ability to think and if they can think like a human.'
-coverImage: '/assets/blog/can-computers-think/can-computers-think.jpg'
+image: '/assets/articles/can-computers-think/can-computers-think.jpg'
 date: '2021-06-17T12:17:52.322Z'
-author:
-  name: Burhan Uddin
-  picture: '/assets/blog/authors/burhan.jpg'
-ogImage:
-  url: '/assets/blog/can-computers-think/can-computers-think.jpg'
 tags:
   - Artificial Intelligence
   - Machine Learning
@@ -36,7 +31,7 @@ same principle to make smarter machines\[10\]. Organisms sense the environment t
 
 ### Artificial General Intelligence (AGI)
 
-![](/assets/blog/can-computers-think/asgi.png)
+![](/assets/articles/can-computers-think/asgi.png)
 
 Although debated, many argue that sooner or later, our current artificial intelligence will evolve into complex consciousness and thus giving birth to what is termed as Artificial General Intelligence (AGI) 3 \[7\], a state where computers will have equal level intelligence of an average human \[14\]. At this level, a computer is smart enough to think and improve upon itself. There is a chance that after this state, it will keep improving itself in a run-away fashion without any human intervention and will reach a level called “Artificial Super General Intelligence” (ASGI) (Figure 1) \[18\]. This event of intelligence explosion will be called Singularity\[3\] \[20\]. Beyond this, computers will surpass the intelligence of the greatest intellectual human minds combined.
 

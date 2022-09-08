@@ -1,18 +1,24 @@
 import Link from 'next/link';
-import Logo from './logo';
-
+import Image from 'next/image';
+import Logo from '../public/images/logo.svg';
 
 const Footer = (props) => {
   const year = new Date().getFullYear();
-
+  let footerClass = "footer py-4 py-md-5 mt-5 bg-light " + (props.sidebar == true ? "with-sidebar" : "")
   return (
-    <footer id="footer" className={"footer py-4 py-md-5 mt-5 bg-light " + (props.sidebar == true ? "with-sidebar" : "")}>
+    <footer id="footer" className={footerClass}>
       <div className="container py-4 py-md-5 px-4 px-md-3">
         <div className="row">
           <div className="col-lg-3 mb-3">
-            <Link className="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="brhn.me">
-              <Logo />
-            </Link>
+
+            <div className="d-inline-flex align-items-center mb-2 link-dark text-decoration-none">
+              <Link href="/" >
+                <a aria-label="brhn.me">
+                  <Image className="logo" src={Logo} />
+                </a>
+              </Link>
+            </div>
+
             <ul className="list-unstyled small text-muted mt-3">
               <li className="mb-2">Built with <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://nextjs.org/">NextJS</a> and <a href="https://reactjs.org/">ReactJS</a>. Hosted in <a href="https://www.netlify.com/">Netlify</a> and <a href="https://www.github.com/">Github</a>.</li>
               <li className="mb-2">Design inspired by <a href="https://github.com/startbootstrap/startbootstrap-resume">Start Bootstrap - Resume</a>.</li>
@@ -24,7 +30,7 @@ const Footer = (props) => {
             <ul className="list-unstyled">
               <li className="mb-2"><Link href="/">Home</Link></li>
               <li className="mb-2"><Link href="/resume">Resume</Link></li>
-              <li className="mb-2"><Link href="/blogs">Blogs</Link></li>
+              <li className="mb-2"><Link href="/posts">Posts</Link></li>
               <li className="mb-2"><Link href="/travel">Travel</Link></li>
               <li className="mb-2"><Link href="/activities">Activities</Link></li>
               <li className="mb-2"><Link href="/contact">Contact</Link></li>

@@ -2,13 +2,8 @@
 title: 'Explaining what learned models predict: In which cases can we trust machine learning models and when is caution required?'
 excerpt: 'In many cases, it is difficult to explain how machine learning models predict. Transparency becomes a big issue when it comes to applying models in several real-life areas. Here, we discuss how we can explain a model’s predictions and how people’s trust in the model depends on its explainability. We also try to understand where certain caution is required. AI-based products and services are increasingly prevalent for decision making in a wide range of domains. Machine learning models predict decisions based on patterns from data. When the complexity  
 and amount of data grows, it becomes harder to explain those predictions. Without proper explainability of the result, these models may lose trust and credibility, especially when using it in some high-stakes decision-making. In such cases, it is also important to be cautious. Cyber attacks to access confidential data or the unpredictable nature of models may result in unexpected outcomes.'
-coverImage: '/assets/blog/explaining-what-learned-models-predict/xai.png'
+image: '/assets/articles/explaining-what-learned-models-predict/xai.png'
 date: '2022-05-21T05:15:52.322Z'
-author:
-  name: Burhan Uddin
-  picture: '/assets/blog/authors/burhan.jpg'
-ogImage:
-  url: '/assets/blog/explaining-what-learned-models-predict/xai.png'
 tags:
   - Artificial Intelligence
   - Machine Learning
@@ -18,14 +13,14 @@ In many cases, it is difficult to explain how machine learning models predict. T
 
 AI-based products and services are increasingly prevalent for decision making in a wide range of domains. Machine learning models predict decisions based on patterns from data. When the complexity and amount of data grows, it becomes harder to explain those predictions. Without proper explainability of the result, these models may lose trust and credibility, especially when using it in some high-stakes decision-making. In such cases, it is also important to be cautious. Cyber attacks to access confidential data or the unpredictable nature of models may result in unexpected outcomes.
 
-![](/assets/blog/explaining-what-learned-models-predict/black-box-model.png)
+![](/assets/articles/explaining-what-learned-models-predict/black-box-model.png)
 
 Explaining Model’s Prediction
 -----------------------------
 
 It is difficult to explain the decision-making process of black-box models (Figure 1) \[8\]. It acts as a hindrance to use the model. Interpretability of a model helps gain trust and gives easier access to the required insights when something goes wrong. Interpretability is how accurately a model can relate cause to an effect \[9\]. On the other hand, explainability is a way to explain the internal mechanics of the black box neural network in human terms.\[14\] This ability to improve a model based on these insights helps alleviate an untrustworthy situation. \[13\]. There are already some research going on trying to explain and explore the predictions of black-box models\[7\] \[16\]. These interpretable models led to the birth of explanatory artificial intelligence (XAI), where rather than trying to explain a black-box model, it is attempted to make the ML models explainable from the beginning (??) \[4\]. These models are highly interpretable and can explain their own decisions. Transparency of these models also aids in avoiding potential biases in training data \[3\].
 
-![](/assets/blog/explaining-what-learned-models-predict/XAI-concept.png)
+![](/assets/articles/explaining-what-learned-models-predict/XAI-concept.png)
 
 Assessing Trust
 ---------------
@@ -36,7 +31,7 @@ It was found that both a model’s stated accuracy and observed accuracy impact 
 
 Uncertainty occurs when a model tries to predict based on imperfect or incomplete information. It can also impact trust in the model as uncertainty may result in unexpected output. In such cases, proper evaluation of uncertainty is required. To illustrate, in areas like health care or autonomous vehicles\[6\], realistic estimation of uncertainties is vital for credibility of the model \[10\]. Appropriate measurements are required to distinguish between different types of uncertainties to strengthen trust in a model on a specific domain. For example, politics and government uncertainty do not relate to changes in the economy. Nevertheless, business uncertainty can be associated with weakness in the economy\[17\].
 
-![](/assets/blog/explaining-what-learned-models-predict/chain-of-trust.jpg)
+![](/assets/articles/explaining-what-learned-models-predict/chain-of-trust.jpg)
 
 In the paper “The relationship between trust in AI and trustworthy machine learning technologies”\[19\], authors found that technology decisions in each stage of machine learning may impact the trust. They described it as the chain of trust (Figure 3) and classified the trustworthiness of technologies in four categories named Fair, Explainable, Auditable, and Safe (FEAS). These categories are required to be considered in various stages of the pipeline to form the chain of trust. This paper also demonstrated ethical considerations behind the design or deployment of AI products impact perception of trust.
 
@@ -52,7 +47,7 @@ Although many black-box models have outperformed humans in some cases\[5\], reli
 **Handling uncertainties**  
 Proper evaluation of uncertainties is important even in highly interpretable and explainable models as unexpected outcomes can occur. For example, investigation of uncertainty data for autonomous driving is a key safety-related concern\[18\].
 
-![](/assets/blog/explaining-what-learned-models-predict/uncertainty.jpg)
+![](/assets/articles/explaining-what-learned-models-predict/uncertainty.jpg)
 
 Machine learning is rapidly becoming a ubiquitous tool in our daily life. As the complexity of models and data grows, it is becoming difficult to explain the predictions. Usage of black-box models in high-stakes decision-making fields sometimes raises questions about its transparency. So we can rather try using XAI to gain trust. Machine learning models may use tremendous amounts of confidential data for training purposes. It is required to protect them from unauthorized use. Since machine learning is not a mistake proof system, we must use ML models with utmost sincerity when applying them to high-stakes fields.  
   
