@@ -77,6 +77,8 @@ const ArticleItem = (props: ArticleItemProps) => {
             <Image src={post.image}
               width={980}
               height={552}
+              placeholder="blur"
+              blurDataURL={post.thumb}
               layout='responsive' />
           </div>
         </ArticleLink>

@@ -5,6 +5,7 @@ excerpt: 'The question that drives all artificial intelligence has been discusse
 The intangible idea regarding whether a computer or a machine can think has always perplexed the greatest scientific minds\[4\]. Yet, we don’t have any clear answer. Deep learning neural networks have already exceeded human performance in terms of object recognition and pattern matching\[12\]. But intelligence is not all about pattern recognition. It is more about understanding and modeling the world around us, problem-solving, creating new understanding as we learn more about the world\[11\]. In this article, we’ll briefly explore the idea of whether computers have the ability to think and if they can think like a human.'
 image: '/assets/articles/can-computers-think/can-computers-think.jpg'
 date: '2021-06-17T12:17:52.322Z'
+source: "md"
 tags:
   - Artificial Intelligence
   - Machine Learning

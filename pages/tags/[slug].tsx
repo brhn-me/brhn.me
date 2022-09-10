@@ -6,7 +6,7 @@ import Layout from '../../components/layout'
 import { SITE_NAME } from '../../lib/constants'
 import Article from '../../interfaces/article'
 import ArticleList from '../../components/article-list'
-import { getAllPostsTogether } from '../../scripts/data-generator.mjs'
+import { getAllPostsTogetherCached } from '../../scripts/data-generator.mjs'
 import { tagify, untagify } from '../../lib/tags'
 
 type Props = {
@@ -57,7 +57,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  let allPosts = await getAllPostsTogether()
+  let allPosts = getAllPostsTogetherCached()
 
   // only posts in this filter
   let posts: Article[] = [];
@@ -75,6 +75,7 @@ export async function getStaticProps({ params }: Params) {
             link: post.link,
             date: post.date,
             image: post.image,
+            thumb: post.thumb,
             author: {
               name: post['author']['name'],
               picture: post['author']['picture'],
@@ -100,7 +101,7 @@ export async function getStaticProps({ params }: Params) {
 
 
 export async function getStaticPaths() {
-  const posts = await getAllPostsTogether()
+  const posts = await getAllPostsTogetherCached()
 
   // find all unique tags
   let tags: Set<string> = new Set<string>();

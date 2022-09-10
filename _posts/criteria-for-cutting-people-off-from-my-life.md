@@ -5,6 +5,7 @@ excerpt: 'I have decided to cut off a few people from my life. I could have thou
 1.  Judgmental: You judge other people’s choices. You don’t know any details of other people’s life but always find a way to decide if he/she is a success or failure based on your terms. You don’t stop here; you let the other person know how you think of them with your judgmental remarks.  '
 image: '/assets/articles/criteria-for-cutting-people-off-from-my-life/unfriend.jpg'
 date: '2020-07-01T17:12:07.322Z'
+source: "md"
 tags:
   - Thoughts
 ---

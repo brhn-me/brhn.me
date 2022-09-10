@@ -1,0 +1,36 @@
+{
+    "id": "48cd37c07ebd356faf64040965282f02",
+    "title": "Can Computers Think?",
+    "link": "https://www.brhn.me/posts/can-computers-think",
+    "next": {
+        "id": "64bc40767b1aada12de4a12b05a559bc",
+        "title": "Explaining what learned models predict: In which cases can we trust machine learning models and when is caution required?",
+        "image": "/assets/articles/explaining-what-learned-models-predict/xai.png",
+        "link": "https://www.brhn.me/posts/explaining-what-learned-models-predict",
+        "slug": "explaining-what-learned-models-predict",
+        "date": "2022-05-21T05:15:52.322Z",
+        "source": "md"
+    },
+    "prev": {
+        "id": "957bcfe8580151ac3521bc8156247f1e",
+        "title": "SUST CSE Syllabus",
+        "image": "/assets/articles/sust-cse-syllabus/sust.jpg",
+        "link": "https://www.brhn.me/posts/sust-cse-syllabus",
+        "slug": "sust-cse-syllabus",
+        "date": "2021-04-14T05:12:07.322Z",
+        "source": "md"
+    },
+    "related": [
+        {
+            "id": "64bc40767b1aada12de4a12b05a559bc",
+            "title": "Explaining what learned models predict: In which cases can we trust machine learning models and when is caution required?",
+            "image": "/assets/articles/explaining-what-learned-models-predict/xai.png",
+            "link": "https://www.brhn.me/posts/explaining-what-learned-models-predict",
+            "slug": "explaining-what-learned-models-predict",
+            "date": "2022-05-21T05:15:52.322Z",
+            "source": "md",
+            "excerpt": "In many cases, it is difficult to explain how machine learning models predict. Transparency becomes a big issue when it comes to applying models in several real-life areas. Here, we discuss how we can explain a model’s predictions and how people’s trust in the model depends on its explainability. We also try to understand where certain caution is required. AI-based products and services are increasingly prevalent for decision making in a wide range of domains. Machine learning models predict decisions based on patterns from data. When the complexity   and amount of data grows, it becomes harder to explain ...",
+            "weight": 3
+        }
+    ]
+}

@@ -4,6 +4,7 @@ excerpt: 'In many cases, it is difficult to explain how machine learning models 
 and amount of data grows, it becomes harder to explain those predictions. Without proper explainability of the result, these models may lose trust and credibility, especially when using it in some high-stakes decision-making. In such cases, it is also important to be cautious. Cyber attacks to access confidential data or the unpredictable nature of models may result in unexpected outcomes.'
 image: '/assets/articles/explaining-what-learned-models-predict/xai.png'
 date: '2022-05-21T05:15:52.322Z'
+source: "md"
 tags:
   - Artificial Intelligence
   - Machine Learning
@@ -15,15 +16,12 @@ AI-based products and services are increasingly prevalent for decision making in
 
 ![](/assets/articles/explaining-what-learned-models-predict/black-box-model.png)
 
-Explaining Model’s Prediction
------------------------------
-
+### Explaining Model’s Prediction
 It is difficult to explain the decision-making process of black-box models (Figure 1) \[8\]. It acts as a hindrance to use the model. Interpretability of a model helps gain trust and gives easier access to the required insights when something goes wrong. Interpretability is how accurately a model can relate cause to an effect \[9\]. On the other hand, explainability is a way to explain the internal mechanics of the black box neural network in human terms.\[14\] This ability to improve a model based on these insights helps alleviate an untrustworthy situation. \[13\]. There are already some research going on trying to explain and explore the predictions of black-box models\[7\] \[16\]. These interpretable models led to the birth of explanatory artificial intelligence (XAI), where rather than trying to explain a black-box model, it is attempted to make the ML models explainable from the beginning (??) \[4\]. These models are highly interpretable and can explain their own decisions. Transparency of these models also aids in avoiding potential biases in training data \[3\].
 
 ![](/assets/articles/explaining-what-learned-models-predict/XAI-concept.png)
 
-Assessing Trust
----------------
+### Assessing Trust
 
 Deep learning algorithms, trained on enormous data sets, have already exceeded human performance in some fields. In medical research, the performance of deep learning models had outperformed human specialists when the model was trained with millions of images\[5\]. The result proved that black box models could also achieve on par performance of a human expert.
 
@@ -35,8 +33,8 @@ Uncertainty occurs when a model tries to predict based on imperfect or incomplet
 
 In the paper “The relationship between trust in AI and trustworthy machine learning technologies”\[19\], authors found that technology decisions in each stage of machine learning may impact the trust. They described it as the chain of trust (Figure 3) and classified the trustworthiness of technologies in four categories named Fair, Explainable, Auditable, and Safe (FEAS). These categories are required to be considered in various stages of the pipeline to form the chain of trust. This paper also demonstrated ethical considerations behind the design or deployment of AI products impact perception of trust.
 
-Required Cautions
------------------
+### Required Cautions
+
 
 **Ensuring data privacy**  
 Machine learning models may access a mammoth amount of confidential data for training. So it is a matter of concern what data we are providing to models as input training data. What may happen if the data is inadvertently leaked to an adversary? For example, it has been already proved that it is possible to recover an approximate image of a face used in training a facial recognition algorithm, based only on the individual’s name.\[2\]  

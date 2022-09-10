@@ -1,0 +1,16 @@
+{
+    "id": "f573832f1589968f4c369ce2e7544ee8",
+    "title": "May Be",
+    "link": "https://brhnme.medium.com/may-be-2062ff41dffb",
+    "next": null,
+    "prev": {
+        "id": "64bc40767b1aada12de4a12b05a559bc",
+        "title": "Explaining what learned models predict: In which cases can we trust machine learning models and when is caution required?",
+        "image": "/assets/articles/explaining-what-learned-models-predict/xai.png",
+        "link": "https://www.brhn.me/posts/explaining-what-learned-models-predict",
+        "slug": "explaining-what-learned-models-predict",
+        "date": "2022-05-21T05:15:52.322Z",
+        "source": "md"
+    },
+    "related": []
+}

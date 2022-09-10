@@ -3,6 +3,7 @@ title: 'SUST CSE Syllabus'
 excerpt: 'I recently needed a PDF version of the Computer Science Department of the Shahjalal University of Science and Technology curriculum. After ten years, it felt quite a difficult task to find these documents. I called the CSE department, and after calling a few people, I discovered that Joynal vai has the collection of syllabuses for all batches. Special thanks to him for finding time to email me these documents. I am uploading these documents here so that if anyone needs them, they can get them quickly.'
 image: '/assets/articles/sust-cse-syllabus/sust.jpg'
 date: '2021-04-14T05:12:07.322Z'
+source: "md"
 tags:
   - SUST
   - CSE

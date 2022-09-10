@@ -1,0 +1,36 @@
+{
+    "id": "64bc40767b1aada12de4a12b05a559bc",
+    "title": "Explaining what learned models predict: In which cases can we trust machine learning models and when is caution required?",
+    "link": "https://www.brhn.me/posts/explaining-what-learned-models-predict",
+    "next": {
+        "id": "f573832f1589968f4c369ce2e7544ee8",
+        "title": "May Be",
+        "image": "/assets/medium/may-be-2062ff41dffb.webp",
+        "link": "https://brhnme.medium.com/may-be-2062ff41dffb",
+        "slug": "may-be-2062ff41dffb",
+        "date": "2022-09-04T15:16:21.000Z",
+        "source": "medium"
+    },
+    "prev": {
+        "id": "48cd37c07ebd356faf64040965282f02",
+        "title": "Can Computers Think?",
+        "image": "/assets/articles/can-computers-think/can-computers-think.jpg",
+        "link": "https://www.brhn.me/posts/can-computers-think",
+        "slug": "can-computers-think",
+        "date": "2021-06-17T12:17:52.322Z",
+        "source": "md"
+    },
+    "related": [
+        {
+            "id": "48cd37c07ebd356faf64040965282f02",
+            "title": "Can Computers Think?",
+            "image": "/assets/articles/can-computers-think/can-computers-think.jpg",
+            "link": "https://www.brhn.me/posts/can-computers-think",
+            "slug": "can-computers-think",
+            "date": "2021-06-17T12:17:52.322Z",
+            "source": "md",
+            "excerpt": "The question that drives all artificial intelligence has been discussed, debated, and disputed for an eon. This article will discuss some famous experiments regarding computer intelligence. It will differentiate between human intelligence and artificial intelligence. It will also provide some explanation regarding what consciousness is and if it is attainable by machines.\nThe intangible idea regarding whether a computer or a machine can think has always perplexed the greatest scientific minds\\[4\\]. Yet, we don’t have any clear answer. Deep learning neural networks have already exceeded human performance in terms of object recognition and pattern matching\\[12\\]. But intelligence is not all about ...",
+            "weight": 3
+        }
+    ]
+}

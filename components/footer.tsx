@@ -31,8 +31,9 @@ const Footer = (props) => {
               <li className="mb-2"><Link href="/">Home</Link></li>
               <li className="mb-2"><Link href="/resume">Resume</Link></li>
               <li className="mb-2"><Link href="/posts">Posts</Link></li>
-              <li className="mb-2"><Link href="/travel">Travel</Link></li>
-              <li className="mb-2"><Link href="/activities">Activities</Link></li>
+              <li className="mb-2"><Link href="/tags/traveling">Travel</Link></li>
+              <li className="mb-2"><Link href="/tags/বাংলা">বাংলা</Link></li>
+              <li className="mb-2"><Link href="/moocs">MOOCs</Link></li>
               <li className="mb-2"><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -41,6 +42,7 @@ const Footer = (props) => {
             <ul className="list-unstyled">
               <li className="mb-2"><a target="_blank" href="https://www.linkedin.com/in/brhn-me/">LinkedIn</a></li>
               <li className="mb-2"><a target="_blank" href="https://github.com/brhn-me">GitHub</a></li>
+              <li className="mb-2"><a target="_blank" href="https://stackoverflow.com/users/836459/burhan-uddin">Stack Overflow</a></li>
               <li className="mb-2"><a target="_blank" href="https://leetcode.com/brhndotme/">LeetCode</a></li>
               <li className="mb-2"><a target="_blank" href="https://brhnme.medium.com/">Medium</a></li>
               <li className="mb-2"><a target="_blank" href="https://fb.me/brhnme">Facebook</a></li>

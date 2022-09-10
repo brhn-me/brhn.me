@@ -4,14 +4,13 @@ import Head from 'next/head'
 import { SITE_NAME } from '../lib/constants'
 import ArticleList from '../components/article-list'
 import Article from '../interfaces/article'
-import { getAllPosts } from '../lib/data'
+import { getAllPostsTogetherCached } from '../scripts/data-generator.mjs'
 
 type Props = {
-  posts: Article[],
-  author: string
+  posts: Article[]
 }
 
-export default function Index({ posts, author }: Props) {
+export default function Index({ posts }: Props) {
   const title = `Posts :: ${SITE_NAME}`;
   return (
     <>
@@ -34,7 +33,7 @@ export default function Index({ posts, author }: Props) {
 
 
 export const getStaticProps = async () => {
-  let posts = getAllPosts();
+  let posts = getAllPostsTogetherCached();
   return {
     props: { posts }
   }

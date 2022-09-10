@@ -7,10 +7,12 @@ type Article = {
   link: string
   date: string
   image: string
+  thumb: string
   author: Author
   excerpt: string
   content: string
   tags: string[]
+  featured?: string,
   source: string
 }
 
