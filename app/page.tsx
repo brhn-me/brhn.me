@@ -1,3 +1,5 @@
+// src/app/page.tsx
+
 import Social from './components/social';
 import Image from 'next/image';
 import coverImage from '../public/images/cover.jpg'; 

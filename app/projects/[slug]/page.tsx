@@ -1,3 +1,5 @@
+// app/projects/[slug]/page.tsx
+
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getProjects } from 'app/utils'
@@ -51,7 +53,7 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Blog({ params }) {
+export default function Project({ params }) {
   let project = getProjects().find((post) => post.slug === params.slug)
 
   if (!project) {
