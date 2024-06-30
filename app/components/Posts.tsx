@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { formatDate, getPosts } from 'app/utils'
+import { formatDate} from 'app/utils'
+import { getPosts } from 'app/data'
 
-export function Posts() {
+export default function Posts() {
   let posts = getPosts()
 
   return (

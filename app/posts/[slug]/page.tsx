@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
-import { formatDate, getPosts } from 'app/utils'
-import { baseUrl } from 'app/sitemap'
+import { formatDate} from 'app/utils'
+import { getPosts } from 'app/data'
+import { BASE_URL } from 'app/config'
 
 export async function generateStaticParams() {
   let posts = getPosts()
@@ -25,7 +26,7 @@ export function generateMetadata({ params }) {
   } = post.metadata
   let ogImage = image
     ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+    : `${BASE_URL}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
@@ -35,7 +36,7 @@ export function generateMetadata({ params }) {
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/posts/${post.slug}`,
+      url: `${BASE_URL}/posts/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -72,9 +73,9 @@ export default function Blog({ params }) {
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
             image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
+              ? `${BASE_URL}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/posts/${post.slug}`,
+            url: `${BASE_URL}/posts/${post.slug}`,
             author: {
               '@type': 'Person',
               name: 'Burhan Uddin',

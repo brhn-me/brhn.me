@@ -1,6 +1,7 @@
-// src/app/robots.ts
+// app/robots.ts
 
-import { baseUrl } from 'app/sitemap'
+import { BASE_URL } from "./config";
+
 
 export default function robots() {
   return {
@@ -9,6 +10,6 @@ export default function robots() {
         userAgent: '*',
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${BASE_URL}/sitemap.xml`,
   }
 }
