@@ -1,6 +1,5 @@
-import { getPosts } from 'app/utils'
-
-export const baseUrl = 'https://www.brhn.me'
+import { getPosts, getProjects } from 'app/data'
+import { baseUrl } from './config'
 
 export default async function sitemap() {
   let posts = getPosts().map((post) => ({
@@ -8,7 +7,12 @@ export default async function sitemap() {
     lastModified: post.metadata.publishedAt,
   }))
 
-  let routes = ['', '/posts'].map((route) => ({
+  let projects = getProjects().map((project) => ({
+    url: `${baseUrl}/projects/${project.slug}`,
+    lastModified: project.metadata.publishedAt,
+  }))
+
+  let routes = ['', '/posts', '/projects'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))

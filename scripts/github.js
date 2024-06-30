@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// scripts/github.js
+
 const fs = require('fs');
 const path = require('path');
 

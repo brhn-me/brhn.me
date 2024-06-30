@@ -1,4 +1,5 @@
-import ArrowIconLink from 'app/components/ArrowIconLink';
+// src/app/profile/page.tsx
+
 import Badge from 'app/components/Badage';
 import React from 'react';
 

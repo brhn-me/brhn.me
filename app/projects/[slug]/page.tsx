@@ -2,8 +2,9 @@
 
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
-import { formatDate, getProjects } from 'app/utils'
-import { baseUrl } from 'app/sitemap'
+import { formatDate} from 'app/utils'
+import { baseUrl } from 'app/config'
+import { getProjects } from 'app/data'
 
 export async function generateStaticParams() {
   let projects = getProjects()

@@ -35,7 +35,7 @@ function readMDXFile(filePath) {
   return parseFrontmatter(rawContent)
 }
 
-function getMDXData(dir) {
+export function getMDXData(dir) {
   let mdxFiles = getMDXFiles(dir)
   return mdxFiles.map((file) => {
     let { metadata, content } = readMDXFile(path.join(dir, file))
@@ -47,14 +47,6 @@ function getMDXData(dir) {
       content,
     }
   })
-}
-
-export function getPosts() {
-  return getMDXData(path.join(process.cwd(), 'app', 'posts', 'data'))
-}
-
-export function getProjects() {
-  return getMDXData(path.join(process.cwd(), 'app', 'projects', 'data'))
 }
 
 export function formatDate(date: string, includeRelative = false) {

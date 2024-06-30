@@ -1,5 +1,7 @@
+// src/app/rss/route.ts
+
 import { baseUrl } from 'app/sitemap'
-import { getPosts } from 'app/utils'
+import { getPosts } from 'app/data'
 
 export async function GET() {
   let posts = await getPosts()

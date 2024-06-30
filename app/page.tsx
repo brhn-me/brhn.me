@@ -1,13 +1,11 @@
-// src/app/page.tsx
-
 import Social from './components/social';
 import Image from 'next/image';
-import coverImage from '../public/images/cover.jpg'; 
+import coverImage from 'app/assets/covers/cover1.jpg'; 
 
 export default function Page() {
   return (
     <section>
-      <p className="mb-4">
+      <p className="mb-4 text-left">
         Hi 👋 <br /><br />
         I am <strong>Burhan</strong>. I am currently pursuing my Master's in Artificial Intelligence specialization at the University of Oulu.
         Previously, I have worked at a Nordic AI startup. During my undergrad, our team built the first-ever Bengali search engine, 
@@ -16,15 +14,16 @@ export default function Page() {
       <div className="my-8">
         <Social />
       </div>
-      <div className="my-8">
+      <div className="my-8 flex flex-col items-center">
         <Image 
           src={coverImage} 
           alt="Burhan Uddin" 
-          width={500} 
-          height={500} 
+          width={768} 
+          height={768} 
           placeholder="blur"
           className="rounded-lg"
         />
+        <div className="mt-2 text-gray-700">The best view comes after the hardest climb!!</div>
       </div>
     </section>
   );

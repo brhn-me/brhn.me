@@ -6,7 +6,7 @@ import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
-import { baseUrl } from './sitemap'
+import { baseUrl } from './config'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -52,7 +52,7 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto flex flex-col min-h-screen">
+      <body className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-auto flex flex-col mt-6 px-2 md:px-0">
           {children}
