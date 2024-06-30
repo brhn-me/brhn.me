@@ -52,6 +52,9 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
+      <head>
+        <link rel="icon" href="/favicon/favicon.ico" />
+      </head>
       <body className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto flex flex-col min-h-screen">
         <Header />
         <main className="flex-auto flex flex-col mt-6 px-2 md:px-0">
