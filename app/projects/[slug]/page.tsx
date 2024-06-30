@@ -3,7 +3,7 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate} from 'app/utils'
-import { baseUrl } from 'app/config'
+import { BASE_URL } from 'app/config'
 import { getProjects } from 'app/data'
 
 export async function generateStaticParams() {
@@ -28,7 +28,7 @@ export function generateMetadata({ params }) {
   } = project.metadata
   let ogImage = image
     ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+    : `${BASE_URL}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
@@ -38,7 +38,7 @@ export function generateMetadata({ params }) {
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/project/${project.slug}`,
+      url: `${BASE_URL}/project/${project.slug}`,
       images: [
         {
           url: ogImage,
@@ -75,9 +75,9 @@ export default function Project({ params }) {
             dateModified: project.metadata.publishedAt,
             description: project.metadata.summary,
             image: project.metadata.image
-              ? `${baseUrl}${project.metadata.image}`
+              ? `${BASE_URL}${project.metadata.image}`
               : `/og?title=${encodeURIComponent(project.metadata.title)}`,
-            url: `${baseUrl}/projects/${project.slug}`,
+            url: `${BASE_URL}/projects/${project.slug}`,
             author: {
               '@type': 'Person',
               name: 'Burhan',

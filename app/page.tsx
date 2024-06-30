@@ -1,4 +1,4 @@
-import Social from './components/social';
+import Social from './components/Social';
 import Image from 'next/image';
 import coverImage from 'app/assets/covers/cover1.jpg'; 
 

@@ -1,4 +1,4 @@
-import { Projects } from 'app/components/projects'
+import Projects from 'app/components/Projects'
 
 export const metadata = {
   title: 'Projects',

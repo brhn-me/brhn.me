@@ -2,14 +2,14 @@ import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
+import Header from './components/Header'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
-import { baseUrl } from './config'
+import Footer from './components/Footer'
+import { BASE_URL } from './config'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'brhn.me',
     template: '%s | K H M Burhan Uddin',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'brhn.me',
     description: 'This is personal website of K H M Burhan Uddin',
-    url: baseUrl,
+    url: BASE_URL,
     siteName: 'brhn.me',
     locale: 'en_US',
     type: 'website',
@@ -53,7 +53,7 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto flex flex-col min-h-screen">
-        <Navbar />
+        <Header />
         <main className="flex-auto flex flex-col mt-6 px-2 md:px-0">
           {children}
         </main>
