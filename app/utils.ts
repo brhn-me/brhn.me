@@ -1,29 +1,21 @@
 import fs from 'fs'
 import path from 'path'
+import matter from 'gray-matter'
+import { ProjectMetaData } from './projects/ProjectMetaData'
 
-type Metadata = {
-  title: string
-  publishedAt: string
-  summary: string
-  image?: string
-}
+
 
 function parseFrontmatter(fileContent: string) {
-  let frontmatterRegex = /---\s*([\s\S]*?)\s*---/
-  let match = frontmatterRegex.exec(fileContent)
-  let frontMatterBlock = match![1]
-  let content = fileContent.replace(frontmatterRegex, '').trim()
-  let frontMatterLines = frontMatterBlock.trim().split('\n')
-  let metadata: Partial<Metadata> = {}
-
-  frontMatterLines.forEach((line) => {
-    let [key, ...valueArr] = line.split(': ')
-    let value = valueArr.join(': ').trim()
-    value = value.replace(/^['"](.*)['"]$/, '$1') // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value
-  })
-
-  return { metadata: metadata as Metadata, content }
+  const { data, content } = matter(fileContent)
+  const metadata: ProjectMetaData = {
+    title: data.title,
+    publishedAt: data.publishedAt,
+    summary: data.summary,
+    image: data.image,
+    category: data.category,
+    tags: data.tags
+  }
+  return { metadata, content }
 }
 
 function getMDXFiles(dir) {

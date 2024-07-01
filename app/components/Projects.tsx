@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { formatDate } from 'app/utils';
 import { getProjects } from 'app/data';
+import Badge from './Badage'; 
 import ArrowIconLink from 'app/components/ArrowIconLink';
 import {GITHUB_USERNAME} from 'app/config'
 
@@ -18,6 +19,11 @@ function ProjectItem({ project, index }) {
             </p>
             <p className="text-neutral-900 dark:text-neutral-100 mt-1"> 
               {project.metadata.summary}
+            </p>
+            <p>
+              {project.metadata.tags.map((tag, index) => (
+                <Badge key={index}>{tag}</Badge>
+              ))}
             </p>
           </Link>
           <div className="flex space-x-4 mt-4">

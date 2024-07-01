@@ -2,9 +2,11 @@
 
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
+import Badge from 'app/components/Badage'
 import { formatDate} from 'app/utils'
-import { BASE_URL } from 'app/config'
+import { BASE_URL, GITHUB_USERNAME } from 'app/config'
 import { getProjects } from 'app/data'
+import ArrowIconLink from 'app/components/ArrowIconLink'
 
 export async function generateStaticParams() {
   let projects = getProjects()
@@ -80,7 +82,7 @@ export default function Project({ params }) {
             url: `${BASE_URL}/projects/${project.slug}`,
             author: {
               '@type': 'Person',
-              name: 'Burhan',
+              name: 'Burhan Uddin',
             },
           }),
         }}
@@ -88,14 +90,38 @@ export default function Project({ params }) {
       <h1 className="title font-semibold text-2xl tracking-tighter">
         {project.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
+      <div className="mt-2 mb-4 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(project.metadata.publishedAt)}
         </p>
+        {project.metadata.category && (
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            Category: {project.metadata.category}
+          </p>
+        )}
+        {project.metadata.tags && (
+          <div className="flex flex-wrap space-x-2">
+          {project.metadata.tags.map((tag, index) => (
+            <Badge key={index}>{tag}</Badge>
+          ))}
+          </div>
+        )}
       </div>
+      {project.metadata.image && (
+        <div className="mb-4">
+          <img
+          src={project.metadata.image}
+          alt={project.metadata.title}
+          className="mb-8 w-full h-auto object-cover"
+        />
+        </div>        
+      )}
       <article className="prose">
         <CustomMDX source={project.content} />
       </article>
+      <div className='mb-4'>
+        <ArrowIconLink href={`https://www.github.com/${GITHUB_USERNAME}/${project.slug}`} text="repo" />
+      </div>
     </section>
   )
 }

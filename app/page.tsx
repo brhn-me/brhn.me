@@ -18,8 +18,8 @@ export default function Page() {
         <Image 
           src={coverImage} 
           alt="Burhan Uddin" 
-          width={768} 
-          height={768} 
+          width={896} 
+          height={896} 
           placeholder="blur"
           className="rounded-lg"
         />
