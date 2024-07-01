@@ -148,3 +148,16 @@ table {
 .title {
   text-wrap: balance;
 }
+
+
+
+.logo-wrapper {
+  filter: invert(0); 
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .logo-wrapper {
+    filter: invert(1);
+  }
+}

@@ -18,7 +18,9 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between mb-16 tracking-tight">
       <div className="flex items-center">
-        <Image src={logo} alt="Logo" width={100} height={60} /> {/* Adjust the width and height as needed */}
+        <div className="logo-wrapper">
+          <Image src={logo} alt="Logo" width={100} height={60} />
+        </div>
       </div>
       <nav
         className="flex flex-row items-center relative fade md:overflow-auto scroll-pr-6 md:relative"
