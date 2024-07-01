@@ -2,7 +2,7 @@
 
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
-import Badge from 'app/components/Badage'
+import Badge from 'app/components/Badge'
 import { formatDate} from 'app/utils'
 import { BASE_URL, GITHUB_USERNAME } from 'app/config'
 import { getProjects } from 'app/data'

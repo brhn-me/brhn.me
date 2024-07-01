@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default: 'brhn.me',
-    template: '%s | K H M Burhan Uddin',
+    template: '%s | brhn.me',
   },
   description: 'This is personal website of K H M Burhan Uddin',
   openGraph: {

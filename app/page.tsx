@@ -23,7 +23,7 @@ export default function Page() {
           placeholder="blur"
           className="rounded-lg"
         />
-        <div className="mt-2 text-gray-700">The best view comes after the hardest climb!!</div>
+        <div className="mt-2 text-gray-700 dark:text-neutral-400 ">The best view comes after the hardest climb!!</div>
       </div>
     </section>
   );

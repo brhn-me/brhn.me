@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { formatDate } from 'app/utils';
 import { getProjects } from 'app/data';
-import Badge from './Badage'; 
+import Badge from './Badge'; 
 import ArrowIconLink from 'app/components/ArrowIconLink';
 import {GITHUB_USERNAME} from 'app/config'
 
