@@ -19,7 +19,9 @@ export default function Header() {
     <header className="flex items-center justify-between mb-16 tracking-tight">
       <div className="flex items-center">
         <div className="logo-wrapper">
-          <Image src={logo} alt="Logo" width={100} height={60} />
+          <Link href="/">
+            <Image src={logo} alt="Logo" width={100} height={60} />
+          </Link>
         </div>
       </div>
       <nav
